@@ -17,6 +17,17 @@ public class ClientService {
 		}
 	}
 	
+	public void deleteClient(Client client ) {
+		
+				PersistenceMock.clientList.remove(client);
+			
+			
+		}
+	
+	
+
+	
+	
 	public void linkAccount(Client client, Account account) {
 		client.getAccounts().add(account);
 		account.setOwner(client);
@@ -28,6 +39,13 @@ public class ClientService {
 			sum += account.getBalance();
 		}
 		return sum;
+	}
+
+	public void readClients() {
+		for (Client client : PersistenceMock.clientList) {
+			System.out.println(client);
+		}
+		
 	}
 	
 	

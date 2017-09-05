@@ -68,9 +68,11 @@ public class Client {
 	}
 	
 	public String toString() {
-		String accountString = null ;		
-		for (Account account : accounts) {
-			accountString +="\n "+account.toString()+ "\n";
+		String accountString = "" ;	
+		if (accounts != null) {
+			for (Account account : accounts) {
+				accountString +="\n "+account.toString()+ "\n";
+			}
 		}
 		return ("id : "+ idClient+
 				" nom prenom:" +firstName+lastName+

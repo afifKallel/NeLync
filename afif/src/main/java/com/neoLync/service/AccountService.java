@@ -2,6 +2,7 @@ package com.neoLync.service;
 
 import com.neoLync.dao.PersistenceMock;
 import com.neoLync.model.Account;
+import com.neoLync.model.Client;
 
 public class AccountService {
 
@@ -33,7 +34,11 @@ public class AccountService {
 		}
 	}
 	
-	
+	public void readAccounts() {
+		for (Account account : PersistenceMock.accountList) {
+			System.out.println(account);
+		}
+	}
 	
 	
 }
