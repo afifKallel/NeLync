@@ -1,19 +1,19 @@
 package com.neoLync.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
-	String idClient;
-	String firstName;
-	String lastName;
-	int age;
-	String adress;
-	String phone;
-	List <Account> accounts;
+	private String idClient;
+	private String firstName;
+	private String lastName;
+	private int age;
+	private String adress;
+	private String phone;
+	private List <Account> accounts;
 	
 	
-	public Client(String idClient, String firstName, String lastName, int age, String adress, String phone,
-			List<Account> accounts) {
+	public Client(String idClient, String firstName, String lastName, int age, String adress, String phone) {
 		
 		this.idClient = idClient;
 		this.firstName = firstName;
@@ -21,7 +21,7 @@ public class Client {
 		this.age = age;
 		this.adress = adress;
 		this.phone = phone;
-		this.accounts = accounts;
+		this.accounts = new ArrayList<Account>();
 	}
 	
 	public String getIdClient() {

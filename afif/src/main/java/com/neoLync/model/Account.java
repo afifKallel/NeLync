@@ -3,12 +3,11 @@ package com.neoLync.model;
 import java.util.Date;
 
 public class Account {
-	int numAccount;
-	float balance;
-	Date creationDate;
-	Client owner;
-	
-		
+	private int numAccount;
+	private float balance;
+	private Date creationDate;
+	private  Client owner;
+			
 	public Account(int numAccount, float balance, Date creationDate, Client owner) {		
 		this.numAccount = numAccount;
 		this.balance = balance;
